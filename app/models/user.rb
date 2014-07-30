@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
   devise :omniauthable
 
   has_and_belongs_to_many :roles
+  has_one :profile
+  before_create :build_profile
+  accepts_nested_attributes_for :profile
 
   def role?(role)
     return !!self.roles.find_by_name(role.to_s)

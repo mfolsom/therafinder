@@ -4,13 +4,18 @@ BaseApp::Application.routes.draw do
 
   get "pages/index"
 
+  get "pages/profile" => "pages#profile", :as => :user
+
+
   get "/admin" => "admin/base#index", :as => "admin"
+
 
   namespace "admin" do
 
     resources :users
 
   end
+  resources :profiles
 
   root :to => "pages#index"
 
