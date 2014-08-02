@@ -8,9 +8,10 @@ Feature: User Profile
     And I sign up
     Then I should see the first step in the profile form
 
-  # Scenario: signed in user creates a new profile
-  #   Given I am on the homepage
-  #   When I sign in
-  #   And I have filled in my profile details
-  #   Then I should be able to see my profile page
+  Scenario: signed in user creates a new profile
+    Given I am registered
+    And I am on the homepage
+    When I sign in
+    And I have filled in my profile details
+    Then I should be able to see my profile page
     

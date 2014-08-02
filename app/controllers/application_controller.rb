@@ -14,6 +14,9 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     profile_path(resource)
   end
+   def after_update_path_for (resource)
+    profile_path(resource)
+  end
 
   def render404
     render :file => File.join(Rails.root, 'public', '404.html'), :status => 404, :layout => false

@@ -1,26 +1,80 @@
+<ul class="nav nav-pills">
+  <li class="active"><a href="#">Step 1 of 3</a></li>
+  <li><a href="#">Step 2 of 3</a></li>
+  <li><a href="#">Step 3 of 3</a></li>
+</ul>  
 <div class="panel panel-default">
   <div class="panel-heading">
     <div class="panel-title">
       <h1>Tell us about you</h1>
     </div>
   </div>
-  <div class="panel-body">
+  <div class="panel-body">      
+       
+
     <%= form_for @profile do |f| %>
 
       <div class="form-group">
+
       <%= f.label :your_name %>
       <%= f.text_field :your_name, class: "form-control" %>
       </div>
 
       <div class="form-group">
+      <h1 class="heading heading-medium heading-alt">Working Area</h1>
       <%= f.label :location %>
       <%= f.text_field :location, class: "form-control" %>
       </div>
 
-     
+     <!--  <div class="form-group">
+          <label>How far are you willing to travel?</label>
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+              Select Radius
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 miles</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">10 miles</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">15 miles</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">20 miles</a></li>
+            </ul>
+        </div>
+      </div> -->
+  
+<!--             <h1 class="heading heading-medium heading-alt">Treatments you offer</h1>
 
+            <ul class="list-group">
+              <li class="list-group-item">Therapeutic Massage</li>
+              <li class="list-group-item">Deep Tissue Massage</li>
+              <li class="list-group-item">Swedish Massage</li>
+              <li class="list-group-item">Stone Therapy Massage</li>
+              <li class="list-group-item">Aromatherapy Massage</li>
+            </ul>
+           <div class="form-group">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                Choose another treatment
+                <span class="caret"></span>
+              </button>
+              <br>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation"><a role="menuitem" tabindex="1" href="#">Indian Head Massage</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="1" href="#">Thai Massage</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="1" href="#">Sports Massage</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="1" href="#">Reflexology</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="1" href="#">Pre and Post Natal Massage</a></li>
+              </ul>
+            </div>
+            <br>                   
+            <input type="submit" id="add-treatment-button" class="btn btn-standard btn-add-trade hidden-js" name="add_treatment" value="Add treatment" data-role="none"/>
+      </div> -->
+  <!--     <div class="info-box">
+          <h2 class="heading">What type of leads would you like to receive?</h2>
+          <p>Please rearrange your treatments to reflect your preferred clients. We’ll send you more leads for your top treatments.</p>
+      </div> -->
       <div class="form-group">
-        <%= f.submit "Update", class: "btn btn-primary" %>
+        <%= f.submit "Next", class: "btn btn-primary" %>
       </div>
     <% end %>
   </div>

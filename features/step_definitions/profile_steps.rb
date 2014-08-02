@@ -1,6 +1,8 @@
 
 Given(/^I have filled in my profile details$/) do
-  pending # express the regexp above with the code you wish you had
+  fill_in "profile[your_name]", :with => "John Doe"
+  fill_in "profile[location]", :with => "London, England"
+  click_button "Next"
 end
 
 Then(/^I should see the first step in the profile form$/) do
@@ -11,6 +13,7 @@ Then(/^I should see the first step in the profile form$/) do
 end
 
 Then(/^I should be able to see my profile page$/) do
-  pending # express the regexp above with the code you wish you had
+  page.should have_content("John Doe")
+  page.should have_content("London, England")
 end
 
